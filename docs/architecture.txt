@@ -1,0 +1,81 @@
+╔════════════════════════════════════════════════════════════════════════╗
+║                     AWS LOAD BALANCED WEB APPLICATION                   ║
+║                           ARCHITECTURE DIAGRAM                          ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+                              INTERNET
+                                 │
+                                 │ HTTP (Port 80)
+                                 ▼
+                    ┌────────────────────────┐
+                    │  APPLICATION LOAD      │
+                    │  BALANCER (ALB)        │
+                    │  Security Group: ALB-SG│
+                    │  Port: 80              │
+                    └────────────────────────┘
+                                 │
+                    ┌────────────┼────────────┐
+                    │            │            │
+                    ▼            ▼            ▼
+        ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
+        │   EC2 Instance  │ │   EC2 Instance  │ │   EC2 Instance  │
+        │   Server-1      │ │   Server-2      │ │   Server-3      │
+        │   us-east-1a    │ │   us-east-1b    │ │   us-east-1a    │
+        ├─────────────────┤ ├─────────────────┤ ├─────────────────┤
+        │   Nginx :80     │ │   Nginx :80     │ │   Nginx :80     │
+        │      ↓          │ │      ↓          │ │      ↓          │
+        │   Flask :5000   │ │   Flask :5000   │ │   Flask :5000   │
+        └─────────────────┘ └─────────────────┘ └─────────────────┘
+               │                   │                   │
+               └───────────────────┴───────────────────┘
+                                   │
+                        Health Check: /health
+                        Every 30 seconds
+
+═══════════════════════════════════════════════════════════════════════
+
+SECURITY GROUPS:
+
+┌─────────────────────────────────────────────────────────────────┐
+│  ALB Security Group (sg-0919137d18b552bc9)                      │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  Inbound:  HTTP (80) from 0.0.0.0/0                      │   │
+│  │  Outbound: All traffic                                    │   │
+│  └──────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│  EC2 Security Group (sg-09edff58f76faeb95)                      │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  Inbound:  HTTP (80) from ALB Security Group             │   │
+│  │  Inbound:  SSH (22) from Your IP                         │   │
+│  │  Outbound: All traffic                                    │   │
+│  └──────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+
+TRAFFIC FLOW:
+
+1. User requests → http://webapp-alb-1764231315-1467904260.us-east-1.elb.amazonaws.com
+2. ALB receives request on port 80
+3. ALB performs health check on all instances
+4. ALB routes request to healthy instance (Round Robin)
+5. Nginx receives request on port 80
+6. Nginx proxies to Flask application on port 5000
+7. Flask returns server information (hostname, IP, time)
+8. Response travels back through Nginx → ALB → User
+
+═══════════════════════════════════════════════════════════════════
+
+KEY FEATURES:
+
+✓ High Availability      - Multiple instances across AZs
+✓ Load Balancing         - Automatic traffic distribution
+✓ Health Monitoring      - /health endpoint checks every 30s
+✓ Auto Recovery          - Unhealthy instances removed from pool
+✓ Scalability            - Easy to add more instances
+✓ Security               - Security groups isolate traffic
+✓ Infrastructure as Code - Fully automated deployment
+
+═══════════════════════════════════════════════════════════════════

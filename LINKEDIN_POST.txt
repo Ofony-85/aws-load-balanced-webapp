@@ -1,0 +1,51 @@
+🚀 Excited to share my latest AWS cloud infrastructure project!
+
+I just built and deployed a production-ready, highly available web application on AWS with automatic load balancing across 3 EC2 servers.
+
+🌐 Live Demo: http://webapp-alb-1764231315-1467904260.us-east-1.elb.amazonaws.com
+(Click refresh to see load balancing in action!)
+
+🏗️ What I Built:
+- 3 EC2 instances running across multiple availability zones
+- Application Load Balancer handling traffic distribution
+- Nginx reverse proxy + Flask Python backend
+- Automated deployment using Infrastructure as Code
+- Real-time health monitoring with auto-failover
+- Complete security group configuration
+
+💻 Technical Stack:
+✅ AWS (EC2, Application Load Balancer, VPC, Security Groups)
+✅ Amazon Linux 2023
+✅ Python 3.9 + Flask framework
+✅ Nginx web server
+✅ Bash scripting for automation
+
+🎯 Key Learning Outcomes:
+→ Designed scalable, fault-tolerant cloud architectures
+→ Implemented load balancing for high availability
+→ Configured security groups and network isolation
+→ Automated infrastructure deployment (IaC approach)
+→ Managed Linux servers and systemd services
+→ Set up health checks and monitoring
+
+🔥 The Cool Part:
+Every time you refresh the page, you might see a different server hostname - that's load balancing doing its magic! The ALB intelligently distributes traffic across healthy instances.
+
+📊 Architecture Highlights:
+- Multi-AZ deployment for resilience
+- Health checks every 30 seconds
+- Automatic removal of unhealthy instances
+- Round-robin traffic distribution
+- Secure network segmentation
+
+🔗 Full source code and documentation on GitHub: [Add your GitHub link]
+
+This project demonstrates real-world DevOps and Cloud Engineering skills that companies are actively looking for. From infrastructure design to deployment automation, it covers the full stack of cloud operations.
+
+#AWS #CloudComputing #DevOps #CloudEngineering #Python #Flask #Nginx #Infrastructure #LoadBalancing #HighAvailability #InfrastructureAsCode #LearningInPublic #TechCareer
+
+---
+
+💡 Questions about the architecture or want to discuss cloud infrastructure? Let's connect! Drop a comment or DM me.
+
+🔖 Bookmark this for your next AWS project!
