@@ -89,13 +89,13 @@ http://your-load-balancer-XXXXX.us-east-1.elb.amazonaws.com
 ## 📸 Screenshots
 
 ### Application Homepage
-![Homepage](docs/screenshots/screenshot-homepage.png)
+![Homepage]("C:\Users\OFONIME\OneDrive\Pictures\Screenshots 1\screenshot-homepage.png.png")
 
 ### Load Balancing in Action
-![Load Balancing](docs/screenshots/screenshot-loadbalancing.png)
+![Load Balancing]("C:\Users\OFONIME\OneDrive\Pictures\Screenshots\screenshot-loadbalancing.png.png")
 
 ### Health Check Endpoint
-![Health Check](docs/screenshots/screenshot-health.png)
+![Health Check]("C:\Users\OFONIME\OneDrive\Pictures\Screenshots\screenshot-health.png.png")
 
 ## 🏗️ Infrastructure Details
 
@@ -198,8 +198,6 @@ Type `yes` when prompted to confirm deletion.
 
 ## 📚 Documentation
 
-- [Technical Documentation](docs/TECHNICAL.md) - Deep dive into architecture
-- [Deployment Guide](docs/DEPLOYMENT_GUIDE.md) - Detailed deployment steps
 - [Architecture Diagram](docs/architecture.txt) - Visual architecture
 
 ## 🎓 Skills Demonstrated
@@ -273,9 +271,9 @@ Contributions welcome! Feel free to:
 ## 📧 Contact
 
 **Ofonime Offong**
-- GitHub: [@ofonimeoffong](https://github.com/ofonimeoffong)
-- LinkedIn: [Ofonime Offong](https://linkedin.com/in/ofonimeoffong)
-- Email: ofonime.offong@example.com
+- GitHub: [@ofonimeoffong](https://github.com/Ofony-85)
+- LinkedIn: [Ofonime Offong](https://www.linkedin.com/in/ofonime-offong-139322a3/)
+- Email: ofonyme3@gmail.com
 
 ---
 
