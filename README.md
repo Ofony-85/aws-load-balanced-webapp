@@ -83,19 +83,8 @@ chmod +x scripts/deploy.sh
 After deployment completes, the script will display your URL:
 
 ```
-http://your-load-balancer-XXXXX.us-east-1.elb.amazonaws.com
+http://webapp-alb-1764231315-1467904260.us-east-1.elb.amazonaws.com
 ```
-
-## 📸 Screenshots
-
-### Application Homepage
-![Homepage]("C:\Users\OFONIME\OneDrive\Pictures\Screenshots 1\screenshot-homepage.png.png")
-
-### Load Balancing in Action
-![Load Balancing]("C:\Users\OFONIME\OneDrive\Pictures\Screenshots\screenshot-loadbalancing.png.png")
-
-### Health Check Endpoint
-![Health Check]("C:\Users\OFONIME\OneDrive\Pictures\Screenshots\screenshot-health.png.png")
 
 ## 🏗️ Infrastructure Details
 
