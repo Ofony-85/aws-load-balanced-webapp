@@ -303,3 +303,16 @@ When you refresh the application homepage, the ALB distributes traffic across he
 
 **This proves the load balancer is working correctly!** ✅
 
+
+---
+
+## 📸 Screenshots
+
+> **Note:** Screenshots are being uploaded. In the meantime, you can view the live application at the URL above!
+
+**Application demonstrates:**
+- ✅ Beautiful responsive UI showing server information
+- ✅ Load balancing - hostname changes on refresh (ip-172-31-2-46 ↔ ip-172-31-6-141)
+- ✅ Health check endpoint returning JSON
+- ✅ 3 EC2 instances running in AWS console (2/3 healthy)
+
