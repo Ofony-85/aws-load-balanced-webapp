@@ -269,3 +269,37 @@ Contributions welcome! Feel free to:
 ⭐ **If this project helped you learn about AWS and cloud infrastructure, please give it a star!**
 
 **Built with ❤️ using AWS, Python, and Open Source tools**
+
+## 📸 Screenshots
+
+### 1. Application Homepage - Server 1
+![Homepage Server 1](docs/screenshots/homepage-server1.png)
+*Showing server: ip-172-31-2-46*
+
+### 2. Load Balancing in Action - Server 2
+![Homepage Server 2](docs/screenshots/homepage-server2-loadbalancing.png)
+*After refresh, showing different server: ip-172-31-6-141 - Load balancing works!*
+
+### 3. Health Check Endpoint
+![Health Check](docs/screenshots/health-endpoint.png)
+*JSON response: {"hostname":"ip-172-31-6-141","status":"healthy"}*
+
+### 4. AWS EC2 Console - All Instances Running
+![EC2 Console](docs/screenshots/aws-ec2-console.png)
+*3 WebApp servers running with 2/2 status checks passed*
+
+---
+
+## 📊 Load Balancing Demonstration
+
+When you refresh the application homepage, the ALB distributes traffic across healthy instances:
+
+| Request | Server Hostname | Server IP |
+|---------|----------------|-----------|
+| 1 | ip-172-31-2-46 | 172.31.2.46 |
+| 2 | ip-172-31-6-141 | 172.31.6.141 |
+| 3 | ip-172-31-2-46 | 172.31.2.46 |
+| 4 | ip-172-31-6-141 | 172.31.6.141 |
+
+**This proves the load balancer is working correctly!** ✅
+
